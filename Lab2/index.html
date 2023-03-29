@@ -36,7 +36,7 @@ function delOldData(){
   var rowCount = c.length;
   var cellCount = myTable.rows[0].cells.length;
   for(var j = rowCount ; j > 1 ; j--){
-    var row = myTable.deleteRow(1);
+    var row = myTable.deleteRow(-1);
     row.insertCell(0).innerHTML = d[i];
     row.insertCell(1).innerHTML = c[i];
     row.insertCell(2).innerHTML = t[i];
