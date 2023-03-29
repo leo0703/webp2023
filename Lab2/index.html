@@ -32,14 +32,8 @@ function addNewData() {
 }
 
 function delOldData(){
-  var myTable = document.getElementById("csie");
-  var rowCount = c.length;
-  var cellCount = myTable.rows[0].cells.length;
-  for(var j = rowCount ; j > 1 ; j--){
-    var row = myTable.deleteRow(-1);
-    row.insertCell(0).innerHTML = d[i];
-    row.insertCell(1).innerHTML = c[i];
-    row.insertCell(2).innerHTML = t[i];
-    console.log(d[i],c[i],t[i])
+  var i = document.getElementById("csie").rows.length;
+  if(i > 1){
+    document.getElementById("csie").deleteRow(-1);
   }
-}  
+} 
