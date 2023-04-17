@@ -3,7 +3,6 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
     <meta charset="UTF-8">
     <script>
-        //Ajax get data from url
         var openurl = "https://cloud.culture.tw/frontsite/trans/SearchShowAction.do?method=doFindTypeJ&category=6";
         var xhr = new XMLHttpRequest();
         var curPage = 1;
@@ -17,14 +16,12 @@
             }
         };
 
-        //show page number
         function showPage(curData, ccurPage) {
             var page = document.getElementById("page_btn");
             var btnNmu = Math.ceil(curData.length/10);
             page.innerHTML = ccurPage+' / '+btnNmu + ' 頁';
         }
 
-        //show dataset 10 data per page
         function showDataset(dataset) {
             var myTable = document.getElementById("csie");
             for(var i = myTable.rows.length - 1; i > 0; i--)
@@ -43,7 +40,6 @@
             var btnNmu = Math.ceil(data.length/10);
             showPage(data, curPage);
 
-            //pageUp button
             var btn = document.createElement("button");
             btn.setAttribute("id","buttonpageup");
             btn.innerHTML = "上一頁";
@@ -58,7 +54,6 @@
             }
             page.appendChild(btn);
 
-            //pageDown button
             var btn = document.createElement("button");
             btn.setAttribute("id","buttonpagedown");
             btn.innerHTML = "下一頁";
